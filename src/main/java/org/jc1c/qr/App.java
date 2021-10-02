@@ -23,12 +23,17 @@ public class App {
                 ? args[2]
                 : null;
 
+        Long limitTime = (args.length >= 4 && !args[3].isBlank())
+                ? Long.valueOf(args[3])
+                : null;
+
         JServer.builder()
                 .withHostname(hostname)
                 .withPort(port)
                 .withApiKey(apiKey)
                 .withBacklog(3)
                 .withThreadPool(3)
+                .withHandlersProcessingTimeController(limitTime)
                 .withHandlersController(AppHandlers.class)
                 .build()
                 .start();

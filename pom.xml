@@ -39,7 +39,7 @@
         <dependency>
             <groupId>com.github.kaliuzhnyi</groupId>
             <artifactId>jc1c</artifactId>
-            <version>1.0.1</version>
+            <version>1.0.5</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -93,5 +93,15 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>
